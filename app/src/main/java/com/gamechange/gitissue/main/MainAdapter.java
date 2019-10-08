@@ -48,7 +48,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         RecyclerView.ViewHolder viewHolder = null;
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
 
-        switch (getItemViewType(i)) {
+        switch (i) {
             case ITEM:
                 viewHolder = new ViewHolder(DataBindingUtil.inflate(inflater, R.layout.item_issue, viewGroup, false));
                 break;
