@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="card_layout_margin">12dp</dimen>
+    <dimen name="card_layout_corner_radius">4dp</dimen>
+    <dimen name="card_layout_elevation">4dp</dimen>
+    <dimen name="tv_card_layout_margin">8dp</dimen>
+    <dimen name="tv_card_text_size">16sp</dimen>
+    <dimen name="tv_card_text_small_size">14sp</dimen>
+    <dimen name="tv_card_text_very_small_size">12sp</dimen>
+    <dimen name="card_layout_bottom_margin">4dp</dimen>
+
+</resources>
+

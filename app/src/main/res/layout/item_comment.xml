@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="comment"  type="com.gamechange.gitissue.model.CommentsResponse"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/card_layout_margin"
+    android:layout_marginLeft="@dimen/card_layout_margin"
+    android:layout_marginStart="@dimen/card_layout_margin"
+    android:layout_marginEnd="@dimen/card_layout_margin"
+    android:layout_marginRight="@dimen/card_layout_margin"
+    android:clickable="true"
+    android:focusable="true"
+    android:stateListAnimator="@animator/selector_animator"
+    app:cardUseCompatPadding="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    card_view:cardBackgroundColor="@color/colorCardView"
+    card_view:cardCornerRadius="@dimen/card_layout_corner_radius"
+    card_view:cardElevation="@dimen/card_layout_elevation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/comment_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/tv_card_layout_margin"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/tv_card_text_size"
+            android:textStyle="normal"
+            android:text="@{comment.body}" />
+
+        <TextView
+            android:id="@+id/comment_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/tv_card_text_very_small_size"
+            android:textStyle="italic"
+            android:textAlignment="viewEnd"
+            android:text="@{comment.user.name}"
+            android:layout_marginEnd="@dimen/tv_card_layout_margin"
+            android:layout_marginBottom="@dimen/card_layout_bottom_margin"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</layout>
